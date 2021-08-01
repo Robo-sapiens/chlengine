@@ -18,7 +18,7 @@ add_compile_options(
         $<$<COMPILE_LANGUAGE:CXX>:-Woverloaded-virtual>
         $<$<COMPILE_LANGUAGE:C,CXX>:-Wredundant-decls>
         $<$<COMPILE_LANGUAGE:CXX>:-Wsign-promo>
-        $<$<COMPILE_LANGUAGE:CXX>:-Wzero-as-null-pointer-constant>
+#        $<$<COMPILE_LANGUAGE:CXX>:-Wzero-as-null-pointer-constant>
         $<$<AND:$<CXX_COMPILER_ID:GNU>,$<COMPILE_LANGUAGE:CXX>>:-Wsuggest-override>
         $<$<AND:$<CXX_COMPILER_ID:Clang>,$<COMPILE_LANGUAGE:CXX>>:-Winconsistent-missing-override>
         $<$<COMPILE_LANGUAGE:C,CXX>:-Wshadow>
@@ -38,7 +38,7 @@ if (CMAKE_COMPILER_IS_GNUCXX)
     endif ()
 endif ()
 
-add_subdirectory(modules)
+add_subdirectory(chlengine)
 add_subdirectory(examples)
 
 if (BUILD_TESTING)
